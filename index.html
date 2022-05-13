@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>Channel Page</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  
+  <! –– Bootstrap 4 ––>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css">
+  <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js"></script>
+
+<! –– CSS ––>
+  <link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+
+
+<! –– Page ––>
+<button class="tablink" onclick="openPage('Home', this, 'red')"id="defaultOpen">Live-vid.com</button>
+<button class="tablink" onclick="openPage('description', this, 'green')" >Channels</button>
+<button class="tablink" onclick="openPage('Dashboard', this, 'blue')">Dashboard</button>
+<button class="tablink" onclick="openPage('Packages', this, 'orange')">Packages</button>
+
+<! –– Navigation ––>
+
+ <! –– Home ––> 
+<div id="Home" class="tabcontent">
+  <h3>Live-vid.com</h3> 
+  <img src="live.jpg" alt="Nature" class="responsive" width="500" height="450">
+
+
+<button onclick="document.getElementById('id01').style.display='block'" style="width:auto;">Go Live
+</button>
+
+<div id="id01" class="modal">
+  
+  <form class="modal-content animate" action="/action_page.php" method="post">
+    <div class="imgcontainer">
+      <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">&times;</span>
+     
+    </div>
+
+    <div class="container">
+      <label for="uname"><b>Title</b></label>
+      <input type="text" placeholder="Title" name="uname" required>
+
+      <label for="psw"><b>Description</b></label>
+      <input type="password" placeholder="Description" name="psw" required>
+        
+      <button type="submit">Go</button>
+      
+    </div>
+
+    <div class="container" style="background-color:#f1f1f1">
+      <button type="button" onclick="document.getElementById('id01').style.display='none'" class="cancelbtn">Cancel</button>
+      
+    </div>
+  </form>
+</div>
+  
+</div>
+ 
+</div>
+
+
+<! –– Channels ––>
+<div id="description" class="tabcontent">
+  <h3>Channels</h3>
+  
+  <div class="row">
+  <div class="left" style="background-color:#bbb;">
+    <h2>Menu</h2>
+    <input type="text" id="mySearch" onkeyup="myFunction()" placeholder="Search.." title="Type in a category">
+    <ul id="myMenu">
+      <li><a href="#">Live videos</a></li>
+      <li><a href="#">Movies</a></li>
+      <li><a href="#">TV Shows</a></li>
+      <li><a href="#">Web series</a></li>
+      
+    </ul>
+  </div>
+  
+  <div class="right" style="background-color:#ddd;">
+    <h2>Description</h2>
+    <p>We have live video chat and calling, live ducation, Live TV. also users can watch live sports, breaking news, awards shows, primetime dramas, daytime soaps, local teams and weather forecasts and thousands of shows and movies in the our streaming library</p>
+    
+    
+  </div>
+</div>
+</div>
+
+
+<! –– Dashboard ––>
+
+<div id="Dashboard" class="tabcontent">
+  <h3>Dashboard</h3>
+
+<button onclick="document.getElementById('id02').style.display='block'" style="width:auto;">Edit</button>
+
+<div id="id02" class="modal">
+  <span onclick="document.getElementById('id02').style.display='none'" class="close" title="Close Modal">&times;</span>
+  <form class="modal-content" action="/action_page.php">
+    <div class="container">
+      <h1 class="text-dark">Edit Response</h1>
+      
+      <hr>
+      <label for="email"><b>Title</b></label>
+      <input type="text" placeholder="Title" name="email" required>
+
+      <label for="psw"><b>Description</b></label>
+      <input type="password" placeholder="Description" name="psw" required>
+
+
+      <div class="clearfix">
+        <button type="button" onclick="document.getElementById('id02').style.display='none'" class="cancelbtn">Cancel</button>
+        <button type="submit" class="signupbtn">Save</button>
+      </div>
+    </div>
+  </form>
+</div>
+ 
+</div>
+
+
+
+<! –– Packages ––>
+<div id="Packages" class="tabcontent">
+ 
+  <h2 style="text-align:center">Packages</h2>
+
+
+<div class="columns">
+  <ul class="price">
+    <li class="header">Basic</li>
+    <li class="grey text-danger">$ 9.99 / year</li>
+    <li>Limited Channels</li>
+    <li>Live Streaming</li>
+    
+    <li class="grey"><a href="#" class="button">Sign Up</a></li>
+  </ul>
+</div>
+
+<div class="columns">
+  <ul class="price">
+    <li class="header" style="background-color:#04AA6D">Pro</li>
+    <li class="grey text-danger">$ 24.99 / year</li>
+    <li>Half Channels</li>
+    <li>Live Streaming</li>
+    
+    <li class="grey"><a href="#" class="button">Sign Up</a></li>
+  </ul>
+</div>
+
+<div class="columns">
+  <ul class="price">
+    <li class="header">Premium</li>
+    <li class="grey text-danger">$ 49.99 / year</li>
+    <li>All Channels</li>
+    <li>Live Streaming</li>
+    
+    <li class="grey"><a href="#" class="button">Sign Up</a></li>
+  </ul>
+</div>
+</div>
+
+
+
+
+<! –– Javascript ––>
+<script type="text/javascript" src="script.js"></script>
+  
+</body>
+</html>
